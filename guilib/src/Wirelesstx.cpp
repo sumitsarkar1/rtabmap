@@ -9,7 +9,7 @@ void wirelesstx::Connect()
 {
     //connected
     mysocket = new QTcpSocket(this);
-    mysocket->connectToHost("192.168.1.70",8088);
+    mysocket->connectToHost("192.168.1.82",8088);
 
     if(mysocket->waitForConnected(1000))
     {
