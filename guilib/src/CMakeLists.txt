@@ -13,6 +13,7 @@ SET(headers_ui
 	../include/${PROJECT_PREFIX}/gui/ProgressDialog.h
 	../include/${PROJECT_PREFIX}/utilite/UPlot.h
 	../include/${PROJECT_PREFIX}/utilite/UImageView.h
+        ../include/${PROJECT_PREFIX}/gui/Wirelesstx.h
 	../include/${PROJECT_PREFIX}/gui/CloudViewer.h
 	../include/${PROJECT_PREFIX}/gui/OdometryViewer.h
 	../include/${PROJECT_PREFIX}/gui/LoopClosureViewer.h
@@ -87,6 +88,7 @@ SET(SRC_FILES
 	./DatabaseViewer.cpp
 	./utilite/UPlot.cpp
 	./CloudViewer.cpp
+        ./Wirelesstx.cpp
 	./CloudViewerCellPicker.cpp
 	./CloudViewerInteractorStyle.cpp
 	./OdometryViewer.cpp
@@ -207,9 +209,9 @@ ADD_LIBRARY(rtabmap_gui ${SRC_FILES})
 TARGET_LINK_LIBRARIES(rtabmap_gui rtabmap_core rtabmap_utilite ${LIBRARIES})
 IF(Qt5_FOUND)
     IF(Qt5Svg_FOUND)
-        QT5_USE_MODULES(rtabmap_gui Widgets Core Gui Svg PrintSupport)
+        QT5_USE_MODULES(rtabmap_gui Widgets Core Gui Network Svg PrintSupport)
     ELSE()
-        QT5_USE_MODULES(rtabmap_gui Widgets Core Gui PrintSupport)
+        QT5_USE_MODULES(rtabmap_gui Widgets Core Gui Network PrintSupport)
     ENDIF()
 ENDIF(Qt5_FOUND)
 

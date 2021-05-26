@@ -33,6 +33,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "rtabmap/core/Transform.h"
 #include "rtabmap/core/StereoCameraModel.h"
 #include "rtabmap/gui/CloudViewerInteractorStyle.h"
+#include "rtabmap/gui/Wirelesstx.h"
 
 #include <QVTKWidget.h>
 #include <pcl/pcl_base.h>
@@ -469,6 +470,8 @@ private:
     vtkProp * _octomapActor;
     float _intensityAbsMax;
     double  _coordinateFrameScale;
+
+    wirelesstx *myWireless;
 };
 
 } /* namespace rtabmap */
