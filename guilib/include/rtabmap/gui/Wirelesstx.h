@@ -19,6 +19,7 @@ public:
 
 private :
     QTcpSocket *mysocket;
+    int agent_number;
 
 };
 #endif // WIRELESSTX_H
