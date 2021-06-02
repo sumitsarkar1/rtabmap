@@ -35,7 +35,7 @@ void wirelesstx::sendXYZ(float x, float y, float z)
     s_z = std::to_string(z);
     agent_number_s = std::to_string(agent_number);
 	
-    s = s_x + "," + s_y + "," + s_z + "," + agent_number_s;
+    s = agent_number_s + "," + s_x + "," + s_y + "," + s_z ;
 
     std::cout<<s<<std::endl;
     mysocket->write(s.data());
