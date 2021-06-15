@@ -2,14 +2,14 @@
 
 wirelesstx::wirelesstx(QObject *parent) : QObject(parent)
 {
-    agent_number = 1;		
+    agent_number = 2;		
 }
 
 void wirelesstx::Connect()
 {
     //connected
     mysocket = new QTcpSocket(this);
-    mysocket->connectToHost("192.168.1.82",8088);
+    mysocket->connectToHost("192.168.1.157",8088);
 
     if(mysocket->waitForConnected(1000))
     {
@@ -35,7 +35,7 @@ void wirelesstx::sendXYZ(float x, float y, float z)
     s_z = std::to_string(z);
     agent_number_s = std::to_string(agent_number);
 	
-    s = s_x + "," + s_y + "," + s_z + "," + agent_number_s;
+    s = agent_number_s + "," + s_x + "," + s_y + "," + s_z ;
 
     std::cout<<s<<std::endl;
     mysocket->write(s.data());

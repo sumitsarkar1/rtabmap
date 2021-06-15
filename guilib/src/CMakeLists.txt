@@ -14,6 +14,7 @@ SET(headers_ui
 	../include/${PROJECT_PREFIX}/utilite/UPlot.h
 	../include/${PROJECT_PREFIX}/utilite/UImageView.h
         ../include/${PROJECT_PREFIX}/gui/Wirelesstx.h
+	../include/${PROJECT_PREFIX}/gui/UDPtransmitter.h
 	../include/${PROJECT_PREFIX}/gui/CloudViewer.h
 	../include/${PROJECT_PREFIX}/gui/OdometryViewer.h
 	../include/${PROJECT_PREFIX}/gui/LoopClosureViewer.h
@@ -89,6 +90,7 @@ SET(SRC_FILES
 	./utilite/UPlot.cpp
 	./CloudViewer.cpp
         ./Wirelesstx.cpp
+	./UDPtransmitter.cpp
 	./CloudViewerCellPicker.cpp
 	./CloudViewerInteractorStyle.cpp
 	./OdometryViewer.cpp

@@ -34,6 +34,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include "rtabmap/core/StereoCameraModel.h"
 #include "rtabmap/gui/CloudViewerInteractorStyle.h"
 #include "rtabmap/gui/Wirelesstx.h"
+#include "rtabmap/gui/UDPtransmitter.h"
 
 #include <QVTKWidget.h>
 #include <pcl/pcl_base.h>
@@ -472,6 +473,7 @@ private:
     double  _coordinateFrameScale;
 
     wirelesstx *myWireless;
+    Sender     *udpSender;	
 };
 
 } /* namespace rtabmap */

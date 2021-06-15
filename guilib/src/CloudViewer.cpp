@@ -213,6 +213,8 @@ CloudViewer::CloudViewer(QWidget *parent, CloudViewerInteractorStyle * style) :
 
         myWireless = new wirelesstx();
         myWireless->Connect();
+
+	udpSender = new Sender();
 }
 
 CloudViewer::~CloudViewer()
@@ -2804,7 +2806,8 @@ void CloudViewer::updateCameraTargetPosition(const Transform & pose)
 		Eigen::Affine3f m = pose.toEigen3f();
 		Eigen::Vector3f pos = m.translation();
 
-		myWireless->sendXYZ(pos[0],pos[1],pos[2]);
+		//myWireless->sendXYZ(pos[0],pos[1],pos[2]);
+		udpSender->broadcastDatagram(pos[0],pos[1],pos[2]);
 
 		Eigen::Vector3f lastPos(0,0,0);
 		if(_trajectory->size())
