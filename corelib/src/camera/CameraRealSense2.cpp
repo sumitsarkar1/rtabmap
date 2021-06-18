@@ -658,7 +658,7 @@ bool CameraRealSense2::init(const std::string & calibrationFolder, const std::st
 			}
 			sensors.back() = elem;
 			sensors.back().set_option(rs2_option::RS2_OPTION_ENABLE_POSE_JUMPING, 0);
-			sensors.back().set_option(rs2_option::RS2_OPTION_ENABLE_MAPPING, 0);
+			//sensors.back().set_option(rs2_option::RS2_OPTION_ENABLE_MAPPING, 0);
 			sensors.back().set_option(rs2_option::RS2_OPTION_ENABLE_RELOCALIZATION, 0);
 		}
 		else if ("L500 Depth Sensor" == module_name)
