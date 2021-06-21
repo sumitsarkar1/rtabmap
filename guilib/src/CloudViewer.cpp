@@ -2808,6 +2808,8 @@ void CloudViewer::updateCameraTargetPosition(const Transform & pose)
 
 		//myWireless->sendXYZ(pos[0],pos[1],pos[2]);
 		udpSender->broadcastDatagram(pos[0],pos[1],pos[2]);
+		//std::cout << pos[0] <<" "<< pos[1] <<" "<<pos[2]<< std::endl;
+
 
 		Eigen::Vector3f lastPos(0,0,0);
 		if(_trajectory->size())

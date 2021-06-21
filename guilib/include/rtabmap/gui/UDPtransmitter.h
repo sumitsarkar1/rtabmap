@@ -20,6 +20,11 @@ public:
 private:
     QUdpSocket *udpSocket;
     int agent_number;
+    
+    QString x_;	
+    QString y_;	    
+    QString z_;
+    QString a_;		
 };
 
 #endif
